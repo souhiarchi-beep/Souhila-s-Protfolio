@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Souhila Dahmani — Senior Product Manager</title>
+<meta name="description" content="Senior Product Manager specialising in high-scale commerce, customer lifecycle, and AI-enabled product. 8+ years driving multimillion-dollar growth.">
+<meta property="og:title" content="Souhila Dahmani — Senior Product Manager">
+<meta property="og:description" content="High-scale commerce, lifecycle & AI-enabled product.">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#fbfaf8; --surface:#ffffff; --ink:#1f3355; --body:#3f4a5a; --muted:#7a8698;
+    --line:#e6e2dc; --accent:#c4614a; --accent-soft:#fdf1ee; --sage:#5f7a6b;
+    --radius:14px; --maxw:940px;
+  }
+  html[data-theme="dark"]{
+    --bg:#10141c; --surface:#161c27; --ink:#e8edf6; --body:#b3bdcd; --muted:#7d8798;
+    --line:#242c3a; --accent:#e08a72; --accent-soft:#241a17; --sage:#8fae9c;
+  }
+  *{box-sizing:border-box}
+  body{
+    margin:0; background:var(--bg); color:var(--body);
+    font-family:Inter,system-ui,-apple-system,"Segoe UI",sans-serif;
+    font-size:16px; line-height:1.65; -webkit-font-smoothing:antialiased;
+  }
+  a{color:var(--accent); text-decoration:none}
+  a:hover{text-decoration:underline}
+  .wrap{max-width:var(--maxw); margin:0 auto; padding:0 24px}
+
+  /* ---------- top bar ---------- */
+  .topbar{
+    position:sticky; top:0; z-index:20; backdrop-filter:blur(10px);
+    background:color-mix(in srgb, var(--bg) 88%, transparent);
+    border-bottom:1px solid var(--line);
+  }
+  .topbar .wrap{display:flex; align-items:center; justify-content:space-between; height:58px; gap:16px}
+  .brand{font-family:Fraunces,Georgia,serif; font-weight:700; color:var(--ink); font-size:16px; letter-spacing:.2px}
+  .nav{display:flex; gap:22px; align-items:center}
+  .nav a{color:var(--muted); font-size:14px; font-weight:500}
+  .nav a:hover{color:var(--ink); text-decoration:none}
+  .toggle{
+    border:1px solid var(--line); background:var(--surface); color:var(--muted);
+    width:34px; height:34px; border-radius:9px; cursor:pointer; font-size:14px; line-height:1;
+    display:grid; place-items:center; transition:.2s;
+  }
+  .toggle:hover{color:var(--ink); border-color:var(--muted)}
+  @media(max-width:680px){ .nav a{display:none} }
+
+  /* ---------- hero ---------- */
+  header.hero{padding:64px 0 42px}
+  .eyebrow{
+    display:inline-block; font-size:12px; font-weight:600; letter-spacing:.09em; text-transform:uppercase;
+    color:var(--accent); background:var(--accent-soft); padding:5px 11px; border-radius:99px; margin-bottom:18px;
+  }
+  h1{
+    font-family:Fraunces,Georgia,serif; font-weight:700; color:var(--ink);
+    font-size:clamp(2.2rem,5.5vw,3.3rem); line-height:1.08; margin:0 0 10px; letter-spacing:-.02em;
+  }
+  .role{font-size:clamp(1rem,2.4vw,1.2rem); color:var(--ink); font-weight:600; margin:0 0 16px}
+  .lede{font-size:1.03rem; max-width:62ch; margin:0 0 24px}
+  .lede strong{color:var(--ink); font-weight:600}
+  .meta{display:flex; flex-wrap:wrap; gap:8px 20px; font-size:14px; color:var(--muted); margin-bottom:26px}
+  .cta{display:flex; flex-wrap:wrap; gap:10px}
+  .btn{
+    display:inline-flex; align-items:center; gap:8px; padding:10px 18px; border-radius:10px;
+    font-size:14px; font-weight:600; transition:.18s; border:1px solid transparent;
+  }
+  .btn-primary{background:var(--ink); color:var(--bg)}
+  .btn-primary:hover{opacity:.88; text-decoration:none}
+  .btn-ghost{border-color:var(--line); color:var(--ink); background:var(--surface)}
+  .btn-ghost:hover{border-color:var(--muted); text-decoration:none}
+
+  /* ---------- sections ---------- */
+  section{padding:44px 0; border-top:1px solid var(--line)}
+  h2{
+    font-family:Fraunces,Georgia,serif; font-weight:600; color:var(--ink);
+    font-size:1.45rem; margin:0 0 6px; letter-spacing:-.01em;
+  }
+  .sub{color:var(--muted); font-size:14px; margin:0 0 26px}
+
+  /* ---------- cards / grid ---------- */
+  .grid{display:grid; gap:16px}
+  .grid-2{grid-template-columns:repeat(auto-fit,minmax(250px,1fr))}
+  .card{
+    background:var(--surface); border:1px solid var(--line); border-radius:var(--radius);
+    padding:20px 22px; transition:.2s;
+  }
+  .card:hover{border-color:color-mix(in srgb,var(--accent) 40%, var(--line)); transform:translateY(-2px)}
+  .card h3{margin:0 0 6px; font-size:.95rem; color:var(--ink); font-weight:700; letter-spacing:.01em}
+  .card p{margin:0; font-size:.9rem; color:var(--body)}
+
+  /* ---------- timeline ---------- */
+  .job{position:relative; padding:0 0 26px 26px; border-left:2px solid var(--line)}
+  .job:last-child{padding-bottom:0}
+  .job::before{
+    content:""; position:absolute; left:-7px; top:5px; width:12px; height:12px;
+    border-radius:50%; background:var(--bg); border:2px solid var(--accent);
+  }
+  .job h3{margin:0; font-size:1rem; color:var(--ink); font-weight:700}
+  .job .when{font-size:13px; color:var(--muted); margin:2px 0 10px}
+  .job ul{margin:0; padding-left:17px}
+  .job li{margin-bottom:6px; font-size:.92rem}
+  .job li b{color:var(--ink); font-weight:600}
+
+  /* ---------- feature project ---------- */
+  .feature{
+    background:var(--surface); border:1px solid var(--line); border-left:3px solid var(--accent);
+    border-radius:var(--radius); padding:26px;
+  }
+  .feature h3{margin:0 0 3px; font-family:Fraunces,Georgia,serif; font-size:1.15rem; color:var(--ink); font-weight:600}
+  .feature .when{font-size:13px; color:var(--muted); margin-bottom:16px}
+  .steps{display:grid; gap:14px; grid-template-columns:repeat(auto-fit,minmax(210px,1fr)); margin-bottom:18px}
+  .step .n{
+    font-size:11px; font-weight:700; color:var(--accent); letter-spacing:.08em; text-transform:uppercase;
+    display:block; margin-bottom:4px;
+  }
+  .step p{margin:0; font-size:.88rem}
+  .note{
+    font-size:.83rem; color:var(--muted); border-top:1px dashed var(--line); padding-top:14px; margin:0;
+  }
+
+  /* ---------- skills ---------- */
+  .skillrow{margin-bottom:16px}
+  .skillrow .label{font-size:12px; font-weight:700; letter-spacing:.08em; text-transform:uppercase; color:var(--muted); margin-bottom:8px}
+  .tags{display:flex; flex-wrap:wrap; gap:7px}
+  .tag{
+    font-size:.82rem; padding:5px 11px; border-radius:8px; background:var(--surface);
+    border:1px solid var(--line); color:var(--body);
+  }
+  .tag.hl{border-color:color-mix(in srgb,var(--accent) 45%, var(--line)); color:var(--ink); background:var(--accent-soft)}
+
+  /* ---------- education / footer ---------- */
+  .edu{margin-bottom:16px}
+  .edu b{color:var(--ink)}
+  .edu span{display:block; font-size:.88rem; color:var(--muted)}
+  footer{border-top:1px solid var(--line); padding:32px 0 46px; text-align:center}
+  footer p{margin:0 0 12px; font-size:.9rem; color:var(--muted)}
+  .flinks{display:flex; gap:18px; justify-content:center; flex-wrap:wrap; font-size:.9rem}
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="wrap">
+    <span class="brand">Souhila Dahmani</span>
+    <nav class="nav">
+      <a href="#experience">Experience</a>
+      <a href="#project">Project</a>
+      <a href="#skills">Skills</a>
+      <a href="#contact">Contact</a>
+      <button class="toggle" id="themeBtn" aria-label="Toggle colour theme">◐</button>
+    </nav>
+  </div>
+</div>
+
+<div class="wrap">
+
+  <header class="hero">
+    <span class="eyebrow">Manitoba, Canada</span>
+    <h1>Senior Product Manager</h1>
+    <p class="role">High-Scale Commerce, Lifecycle &amp; AI-Enabled Product</p>
+    <p class="lede">
+      Strategic product leader with 8+ years of experience — 6+ in high-scale food delivery — driving
+      multimillion-dollar revenue growth and system-wide efficiencies. I own end-to-end product lifecycles from
+      <strong>merchant &amp; partner integrations</strong> to <strong>loyalty ecosystems</strong>, and I'm good at
+      turning complex technical architecture into experiences that feel simple. An active
+      <strong>AI enthusiast</strong> who scopes agentic AI workflows and builds working prototypes hands-on to
+      pressure-test ideas before committing engineering time.
+    </p>
+    <div class="meta">
+      <span>+1 204 688 8347</span>
+      <span>souhiarchi@gmail.com</span>
+      <span>English &amp; French</span>
+    </div>
+    <div class="cta">
+      <a class="btn btn-primary" href="mailto:souhiarchi@gmail.com">Get in touch</a>
+      <a class="btn btn-ghost" href="https://www.linkedin.com/in/souhila-dahmani-130791/" target="_blank" rel="noopener">LinkedIn</a>
+      <a class="btn btn-ghost" href="Souhila_Resume_2026_CA.pdf" target="_blank" rel="noopener">Résumé (PDF)</a>
+    </div>
+  </header>
+
+  <section id="focus">
+    <h2>What I focus on</h2>
+    <p class="sub">Where I add the most value on a product team.</p>
+    <div class="grid grid-2">
+      <div class="card">
+        <h3>Strategic Vision</h3>
+        <p>Roadmap planning, GTM strategy, and business case development for high-scale platforms.</p>
+      </div>
+      <div class="card">
+        <h3>Commerce &amp; Fintech</h3>
+        <p>Retail media auctions, API-based integrations, and complex payment &amp; compliance workflows.</p>
+      </div>
+      <div class="card">
+        <h3>AI &amp; Agentic Product Scoping</h3>
+        <p>Defining agent tasks, tool boundaries, guardrails, and success criteria — writing structured PRDs and prompts that AI coding agents can actually execute against.</p>
+      </div>
+      <div class="card">
+        <h3>Rapid Prototyping (Vibe Coding)</h3>
+        <p>Taking concepts from research to working multi-module prototypes on AI build platforms, then evaluating output quality and architectural trade-offs.</p>
+      </div>
+      <div class="card">
+        <h3>Systems Thinking</h3>
+        <p>Simplifying complex Martech/CRM stacks and designing for scale.</p>
+      </div>
+      <div class="card">
+        <h3>Leadership</h3>
+        <p>Directing cross-functional squads (Eng, Design, Data) and keeping senior stakeholders aligned.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="experience">
+    <h2>Experience</h2>
+    <p class="sub">SkipTheDishes (Just Eat Takeaway) · Winnipeg, MB</p>
+
+    <div class="job">
+      <h3>Senior Product Manager — Retail Media &amp; Martech Integrations</h3>
+      <div class="when">July 2025 – Present</div>
+      <ul>
+        <li><b>Domain ownership:</b> Lead the end-to-end strategy and execution of a multimillion-dollar auction-based sponsored placement infrastructure (TopSort APIs).</li>
+        <li><b>System scale:</b> Optimized post-order ad integrations and upgraded the core Martech stack (CMS, CRM, MMP) for performance and legal compliance.</li>
+        <li><b>Outcome:</b> Projected multimillion CAD annual revenue growth through advanced segmentation and geo-targeting.</li>
+      </ul>
+    </div>
+
+    <div class="job">
+      <h3>Product Manager — Customer Lifecycle</h3>
+      <div class="when">April 2024 – July 2025</div>
+      <ul>
+        <li><b>Execution &amp; migration:</b> Directed critical system migrations (MMP/Branch.io, CS messaging/Zendesk) with zero operational downtime.</li>
+        <li><b>Efficiency &amp; automation:</b> Deployed self-serve refund automation that reduced inbound support volume by 20,000 chats per week.</li>
+        <li><b>E-commerce expansion:</b> Spearheaded Google Merchant Center setup — catalog management and feed strategy — unlocking new sales channels.</li>
+      </ul>
+    </div>
+
+    <div class="job">
+      <h3>Product Manager — Customer Loyalty &amp; Retention</h3>
+      <div class="when">March 2020 – April 2024</div>
+      <ul>
+        <li><b>Product vision:</b> Conceived and launched a new loyalty program, achieving a $20M valuation within its first 2 years.</li>
+        <li><b>Cross-functional leadership:</b> Central point for Legal, Finance, Marketing, and Engineering to design point-based gamification "Challenges".</li>
+      </ul>
+    </div>
+
+    <div class="job">
+      <h3>Product Owner — Customer Acquisition</h3>
+      <div class="when">August 2019 – March 2020</div>
+      <ul>
+        <li><b>Growth:</b> Collaborated on SEO and referral programs, driving a 10% increase in new user sign-ups.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="project">
+    <h2>Selected independent project</h2>
+    <p class="sub">Personal R&amp;D — testing how far a PM can get with AI-assisted delivery.</p>
+    <div class="feature">
+      <h3>Self-Directed Consumer App Prototype — AI-Assisted Build</h3>
+      <div class="when">2026 · Personal R&amp;D</div>
+      <div class="steps">
+        <div class="step">
+          <span class="n">01 · Discovery to spec</span>
+          <p>Analysed an underserved consumer category, identified the whitespace, and translated it into a full PRD — MVP scope, data model, cloud architecture, privacy constraints, and success metrics.</p>
+        </div>
+        <div class="step">
+          <span class="n">02 · Agentic AI scoping</span>
+          <p>Authored build prompts and guardrails so AI coding agents could execute the spec autonomously in verifiable slices, with explicit escalation points for irreversible decisions.</p>
+        </div>
+        <div class="step">
+          <span class="n">03 · Build &amp; evaluate</span>
+          <p>Built the prototype on two AI app-build platforms from a single spec, benchmarking output fidelity, architecture, UI controllability, and cost.</p>
+        </div>
+      </div>
+      <p class="note">Takeaway: a well-structured PRD is portable across AI build platforms — but they are not interchangeable. Token economics, manual UI control, and how transparently each tool surfaces its trade-offs materially change the outcome.</p>
+    </div>
+  </section>
+
+  <section id="skills">
+    <h2>Skills &amp; certifications</h2>
+    <p class="sub">Tools I use day to day, and the frameworks behind them.</p>
+
+    <div class="skillrow">
+      <div class="label">Product &amp; Data</div>
+      <div class="tags">
+        <span class="tag">Tableau</span><span class="tag">SQL</span><span class="tag">Jira</span>
+        <span class="tag">Asana</span><span class="tag">Figma</span><span class="tag">Braze</span>
+        <span class="tag">Zendesk</span><span class="tag">TopSort</span><span class="tag">Branch.io</span>
+      </div>
+    </div>
+
+    <div class="skillrow">
+      <div class="label">AI &amp; Prototyping</div>
+      <div class="tags">
+        <span class="tag hl">Agentic workflow scoping</span>
+        <span class="tag hl">Prompt engineering</span>
+        <span class="tag hl">AI coding agents</span>
+        <span class="tag hl">AI app-build platforms</span>
+        <span class="tag hl">LLM-assisted research &amp; PRDs</span>
+      </div>
+    </div>
+
+    <div class="skillrow">
+      <div class="label">Frameworks</div>
+      <div class="tags">
+        <span class="tag">Agile (Scrum/Kanban)</span><span class="tag">A/B testing</span>
+        <span class="tag">API design</span><span class="tag">Feature architecture (FE/BE)</span>
+        <span class="tag">Release cycle management</span>
+      </div>
+    </div>
+
+    <div class="skillrow">
+      <div class="label">Certifications</div>
+      <div class="tags">
+        <span class="tag">Certified Digital Product Manager (AIPMM)</span>
+        <span class="tag">AWS Certified Cloud Practitioner</span>
+        <span class="tag">AWS Certified AI Practitioner</span>
+      </div>
+    </div>
+  </section>
+
+  <section id="education">
+    <h2>Education</h2>
+    <p class="sub">Innovation management, grounded in an engineering background.</p>
+    <div class="edu">
+      <b>Master of Innovative Project Management</b>
+      <span>Polytech Sophia Antipolis, Nice, France — Award: Best Graduation Project for "Vectura" (a futurist supply chain concept)</span>
+    </div>
+    <div class="edu">
+      <b>Engineering Degree in Architecture &amp; Urban Design (Smart Cities)</b>
+      <span>EPAU, Algiers, Algeria</span>
+    </div>
+  </section>
+
+</div>
+
+<footer id="contact">
+  <div class="wrap">
+    <p>Open to conversations about product, commerce platforms, and AI-enabled delivery.</p>
+    <div class="flinks">
+      <a href="mailto:souhiarchi@gmail.com">souhiarchi@gmail.com</a>
+      <a href="https://www.linkedin.com/in/souhila-dahmani-130791/" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="Souhila_Resume_2026_CA.pdf" target="_blank" rel="noopener">Résumé</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+  (function () {
+    var root = document.documentElement;
+    var btn = document.getElementById('themeBtn');
+    var prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+    root.setAttribute('data-theme', prefersDark ? 'dark' : 'light');
+    btn.addEventListener('click', function () {
+      root.setAttribute('data-theme', root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark');
+    });
+    document.querySelectorAll('a[href^="#"]').forEach(function (a) {
+      a.addEventListener('click', function (e) {
+        var t = document.querySelector(a.getAttribute('href'));
+        if (t) { e.preventDefault(); t.scrollIntoView({ behavior: 'smooth', block: 'start' }); }
+      });
+    });
+  })();
+</script>
+</body>
+</html>
